@@ -1,11 +1,19 @@
 #!/bin/bash
 set -e
 
-/usr/sbin/unbound-control-setup
-/usr/sbin/unbound-control start > /dev/null 2>&1
+# Variables
+declare -g d_ip_v4
+d_ip_v4=$(hostname -I)
 
-printf "
-Unbound DNS running
+# Ensure unbound setup
+/usr/sbin/unbound-control-setup
+
+# Information
+printf "Unbound DNS running
 Point your DNS to %s and pass through unbound.
 
-DNS: %s\n" "$(hostname -I)" "$(hostname -I)" && tail -f /dev/stdout
+DNS (IPv4): %s\n" "${d_ip_v4}" "${d_ip_v4}"
+
+# Start the service
+#/usr/sbin/unbound -c /etc/unbound/unbound.conf -d -v
+/usr/sbin/service unbound start && tail -f /dev/null
