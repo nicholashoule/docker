@@ -1,6 +1,8 @@
 # Run a unbound dns server in a container.
 #
-# docker run --rm -it -p 53:53/udp -e DEBUG=true --name unbound-dns 181gaming/unbound
+# docker run --rm -it --name unbound-cloudflare 181gaming/unbound
+#
+# cloudflare-dns.com
 #
 FROM ubuntu
 LABEL maintainer "Nicholas Houle <181gaming@gmail.com>"
