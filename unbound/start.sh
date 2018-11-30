@@ -8,4 +8,4 @@ printf "
 Unbound DNS running
 Point your DNS to %s and pass through unbound.
 
-DNS: %s" "$(hostname -I)" "$(hostname -I)" && tail -f /dev/null
+DNS: %s\n" "$(hostname -I)" "$(hostname -I)" && tail -f /dev/stdout
