@@ -1,6 +1,6 @@
 # Run a unbound dns server in a container.
 #
-# docker run --rm -it -p 53:53 \
+# docker run --rm -it -p 53:53/udp \
 # 	-e DEBUG=true \
 # 	--name unbound-dns \
 # 	181gaming/unbound
