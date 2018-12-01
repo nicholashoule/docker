@@ -6,14 +6,17 @@
 #
 FROM ubuntu
 LABEL maintainer "Nicholas Houle <181gaming@gmail.com>"
-ENV VERSION 1.6.7
 
-RUN apt-get update && apt-get install -y \
-	apt-transport-https \
-	ca-certificates \
-	dnsutils
+ENV NAME=unbound-cloudflare \
+    UNBOUND_VERSION=1.6.7
 
-RUN apt-get install -y unbound
+RUN APT_PACKAGES='apt-transport-https curl ca-certificates dnsutils' && \
+    set -x && \
+    DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --no-install-recommends \
+      $APT_PACKAGES \
+      unbound && \
+    apt-get autoremove -y && apt-get clean && \
+    rm -fr /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
 WORKDIR /etc/unbound/unbound.conf.d
 COPY unbound_srv.conf unbound_srv.conf
@@ -27,5 +30,5 @@ EXPOSE 53/udp
 
 RUN ["chmod", "+x", "/start.sh"]
 
-CMD ["/bin/bash"]
+CMD ["/start.sh"]
 ENTRYPOINT ["/start.sh"]
