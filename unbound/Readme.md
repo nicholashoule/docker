@@ -1,9 +1,17 @@
-Unbound DNS Resolver using cloudflare-dns.com
+# Unbound DNS Resolver using cloudflare-dns.com
 
-Use this command to start the container. 
+## Use this command to start the container: 
 
+```
 docker run --rm -it --name unbound-cloudflare 181gaming/unbound
+```
 
-Information:
+## Information:
 
 Unbound is set to expose 53/udp, so point your DNS at the IPv4 address.
+
+### cloudflare-dns.com
+```
+1.1.1.1
+1.0.0.1
+```
