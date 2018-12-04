@@ -1,3 +1,3 @@
-# docker projects
+# Docker projects
 
 Learning docker.

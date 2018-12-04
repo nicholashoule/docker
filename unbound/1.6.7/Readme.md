@@ -3,12 +3,11 @@
 ## Use this command to start the container: 
 
 ```
-docker run --rm -it --name unbound-cloudflare 181gaming/unbound
+docker run --rm -it --name unbound-cloudflare 181gaming/unbound:1.6.7
 ```
 
 ## Versions:
 
-* latest, [latest/Dockerfile](https://github.com/nicholashoule/docker/tree/master/unbound/)
 * 1.6.7, [1.6.7/Dockerfile](https://github.com/nicholashoule/docker/tree/master/unbound/1.6.7)
 
 ## Information:
