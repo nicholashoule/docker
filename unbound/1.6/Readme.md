@@ -3,12 +3,12 @@
 ## Use this command to start the container: 
 
 ```
-docker run --rm -it --name unbound-cloudflare 181gaming/unbound:1.6.7
+docker run --rm -it --name unbound-cloudflare 181gaming/unbound:1.6
 ```
 
 ## Versions:
 
-* 1.6.7, [1.6.7/Dockerfile](https://github.com/nicholashoule/docker/tree/master/unbound/1.6.7)
+* 1.6, [1.6/Dockerfile](https://github.com/nicholashoule/docker/tree/master/unbound/1.6)
 
 ## Information:
 
@@ -20,6 +20,7 @@ Unbound is set to expose 53/udp, so you'll need to point your DNS at the IPv4 ad
 
 1.1.1.1
 1.0.0.1
+
 ```
 
 ### Links:

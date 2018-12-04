@@ -4,11 +4,11 @@
 #
 # cloudflare-dns.com
 #
-FROM ubuntu
+FROM ubuntu:19.04
 LABEL maintainer "Nicholas Houle <181gaming@gmail.com>"
 
 ENV NAME=unbound-cloudflare \
-    UNBOUND_VERSION=1.6.7
+    UNBOUND_VERSION=1.7
 
 RUN APT_PACKAGES='apt-transport-https curl ca-certificates dnsutils' && \
     set -x && \
