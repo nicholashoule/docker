@@ -25,6 +25,6 @@ Unbound is set to expose 53/udp, so you'll need to point your DNS at the IPv4 ad
 
 ### Links:
 
-[From Wikipedia, Unbound](https://en.wikipedia.org/wiki/Unbound_(DNS_server))
+[From Wikipedia, Unbound](https://en.wikipedia.org/wiki/Unbound_%28DNS_server%29)
 
 Unbound is a validating, recursive, and caching DNS resolver product from NLnet Labs. It is distributed free of charge in open-source form under the BSD license.
