@@ -8,7 +8,7 @@ docker run --rm -it --name unbound-cloudflare 181gaming/unbound:1.8
 
 ## Versions:
 
-* 1.7 [1.7/Dockerfile](https://github.com/nicholashoule/docker/tree/master/unbound/1.7)
+* 1.8 [1.8/Dockerfile](https://github.com/nicholashoule/docker/tree/master/unbound/1.8)
 
 ## Information:
 

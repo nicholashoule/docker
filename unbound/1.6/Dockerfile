@@ -10,7 +10,7 @@ LABEL maintainer "Nicholas Houle <181gaming@gmail.com>"
 ENV NAME=unbound-cloudflare \
     UNBOUND_VERSION=1.6
 
-RUN APT_PACKAGES='apt-transport-https curl ca-certificates dnsutils' && \
+RUN APT_PACKAGES='apt-transport-https curl ca-certificates dnsutils vim' && \
     set -x && \
     DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --no-install-recommends \
       $APT_PACKAGES \
