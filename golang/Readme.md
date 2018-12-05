@@ -1,4 +1,4 @@
-# Golang playground
+# Golang developer playground for building Go services
 
 ## Use this command to start the container: 
 
