@@ -8,9 +8,9 @@ FROM ubuntu:19.04
 LABEL maintainer "Nicholas Houle <181gaming@gmail.com>"
 
 ENV NAME=unbound-cloudflare \
-    UNBOUND_VERSION=latest
+    UNBOUND_VERSION=1.7
 
-RUN APT_PACKAGES='apt-transport-https curl ca-certificates dnsutils' && \
+RUN APT_PACKAGES='apt-transport-https curl ca-certificates dnsutils net-tools vim' && \
     set -x && \
     DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --no-install-recommends \
       $APT_PACKAGES \
@@ -21,14 +21,15 @@ RUN APT_PACKAGES='apt-transport-https curl ca-certificates dnsutils' && \
 WORKDIR /etc/unbound/unbound.conf.d
 COPY unbound_srv.conf unbound_srv.conf
 COPY unbound_ext.conf unbound_ext.conf
+COPY qname-minimisation.conf qname-minimisation.conf
 COPY root-auto-trust-anchor-file.conf root-auto-trust-anchor-file.conf
+RUN \
+   chown -R root:unbound /etc/unbound/unbound.conf.d 
 
 WORKDIR /
 COPY start.sh start.sh
-
-EXPOSE 53/udp
-
 RUN ["chmod", "+x", "/start.sh"]
 
-CMD ["/start.sh"]
+EXPOSE 53/udp
 ENTRYPOINT ["/start.sh"]
+CMD ["-d", "-c", "/etc/unbound/unbound.conf", "-v"]
