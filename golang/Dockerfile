@@ -1,4 +1,4 @@
-# Run a unbound dns server in a container.
+# Run Golang container for building Go services
 #
 # docker run --rm -it --name golang-dev 181gaming/golang
 #
