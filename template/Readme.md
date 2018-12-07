@@ -8,22 +8,22 @@ docker run --rm -it --name golang-dev 181gaming/[name]
 
 ## Versions:
 
-* latest, [latest/Dockerfile](https://github.com/nicholashoule/docker/tree/master/[name]/)
+* latest, [latest/Dockerfile](https://github.com/nicholashoule/docker/tree/master/)
 
 ## Information:
 
-[Link](URL)
+[Link](https://127.0.0.1)
 
 ## Building:
 
 ```
-...
+mkdir -p build/{src,bin}
 ```
 
 
 ### Links:
 
-[From Wikipedia, golang](https://en.wikipedia.org/wiki/Markdown) # %28=(, %29=)
+[From Wikipedia, golang](https://en.wikipedia.org/wiki/Markdown)
 
 Markdown is a lightweight markup language with plain text formatting syntax. Its design allows it to be converted to many output formats, but
 the original tool by the same name only supports HTML.Markdown is often used to format readme files, for writing messages in online discussion
