@@ -1,6 +1,6 @@
 # Run a Ruby docker container service
 #
-# docker run --rm -it --name golang-dev 181gaming/ruby
+# docker run --rm -it --name ruby-dev 181gaming/ruby
 #
 # Information:
 #   Setup rvm

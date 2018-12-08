@@ -3,7 +3,7 @@
 ## Use this command to start the container:
 
 ```
-docker run --rm -it --name golang-dev 181gaming/ruby
+docker run --rm -it --name ruby-dev 181gaming/ruby
 ```
 
 ## Versions:
@@ -36,5 +36,5 @@ ruby -ropen-uri -e 'eval open("https://git.io/vQhWq").read'
 
 Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language. It was
 designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. According to the creator, Ruby
-was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp. It supports multiple programming paradigms, including 
+was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp. It supports multiple programming paradigms, including
 functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.
