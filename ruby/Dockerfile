@@ -41,18 +41,18 @@ RUN /bin/bash -l -c "gem update && gem install $RUBY_GEMS"
 # Set timezone to UTC by default
 RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 
-# Copy Gemfile lock
-ENV BUNDLE_APP_CONFIG /usr/src/app/.bundle
-WORKDIR /usr/src/app
+# Copy Gemfile and scripts
+ENV BUNDLE_APP_CONFIG /home/docker/app/.bundle
+WORKDIR /home/docker/app
 COPY Gemfile lintit.rb ./
 
 # Add docker user to container
 ENV HOME /home/docker
 RUN useradd --create-home --home-dir $HOME docker \
     && chown -R docker:docker $HOME
+
 USER docker
 #RUN /bin/bash -l -c 'bundle env'
-#RUN /bin/bash -l -c 'bundle install'
+RUN /bin/bash -l -c 'bundle install'
 
-USER root
 CMD ["/bin/bash"]
