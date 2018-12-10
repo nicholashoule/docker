@@ -4,4 +4,3 @@ require "rubygems"
 require 'yaml'
 require 'json'
 require 'io/console'
-

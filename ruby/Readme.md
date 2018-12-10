@@ -14,15 +14,18 @@ docker run --rm -it --name ruby-dev 181gaming/ruby
 ## Information:
 
 [Ruby Downloads](https://www.ruby-lang.org/en/downloads/)
+[RVM, Download](https://rvm.io/)
 
-## Building:
+## Commands:
 
 ```
+
 rvm install 2.5.3
 rvm --default use 2.5.3
 gem install [something]
 bundle env
 bundle install
+
 ```
 
 ```

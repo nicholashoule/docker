@@ -1,16 +1,23 @@
 #!/usr/bin/env ruby
+#
+# Example:
+# ruby initit.rb [file].[sh]/[yaml]/[json]
+# 
+# Troubleshooting:
 # ruby -ropen-uri -e 'eval open("https://git.io/vQhWq").read'
 require 'rubygems'
 require 'yaml'
 require 'json'
 require 'io/console'
 
+# Shell linter
 def shell_check(file)
   # ShellCheck: https://github.com/koalaman/shellcheck/wiki/Ignore
   vIgnore = 'SC2009'
   system("shellcheck -e #{vIgnore} " + file)
 end
 
+# yaml linter
 def yaml_check(file)
   YAML.load_file(file)
   rescue Exception => err
@@ -18,6 +25,7 @@ def yaml_check(file)
     false
 end
 
+# Json linter
 def json_check(file)
   JSON.parse( IO.read(file) )
   rescue Exception => err
@@ -30,7 +38,7 @@ IO.popen(["ls", "./"]).readlines.each { |file|
   file.sub!(/^\w (.*)\n/,'\1')
   file.chomp! unless file.nil?
   puts "Processing #{file}"
-  if file.match('\.sh$')
+  if file.match(/(.sh$|.bash$)/)
     exit 1 unless bash_check file
     exit 1 unless shell_check file
   elsif file.match(/(.yaml$|.yml$|.eyaml$)/)

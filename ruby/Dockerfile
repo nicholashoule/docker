@@ -3,8 +3,9 @@
 # docker run --rm -it --name ruby-dev 181gaming/ruby
 #
 # Information:
-#   Setup rvm
-#   Install ruby:2.5.3
+#   ruby:2.5.3
+#   RVM
+#   Bundler
 #
 FROM fedora:29
 MAINTAINER Nicholas Houle <nmhoule@181gaming@gmail.com>
@@ -45,7 +46,11 @@ ENV BUNDLE_APP_CONFIG /usr/src/app/.bundle
 WORKDIR /usr/src/app
 COPY Gemfile lintit.rb ./
 
-#USER docker
+# Add docker user to container
+ENV HOME /home/docker
+RUN useradd --create-home --home-dir $HOME docker \
+    && chown -R docker:docker $HOME
+USER docker
 #RUN /bin/bash -l -c 'bundle env'
 #RUN /bin/bash -l -c 'bundle install'
 
