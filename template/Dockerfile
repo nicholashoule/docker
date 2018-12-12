@@ -5,7 +5,7 @@
 # Information:
 #
 FROM ubuntu:latest
-MAINTAINER Nicholas Houle <nmhoule@181gaming@gmail.com>
+MAINTAINER Nicholas Houle <181gaming@gmail.com>
 
 ENV NAME=name-dev \
     DEBIAN_FRONTEND=noninteractive \

@@ -8,7 +8,7 @@
 #   Bundler
 #
 FROM fedora:29
-MAINTAINER Nicholas Houle <nmhoule@181gaming@gmail.com>
+MAINTAINER Nicholas Houle <181gaming@gmail.com>
 
 ENV NAME=ruby-dev \
     PATH=$PATH:$HOME/.rvm/bin \

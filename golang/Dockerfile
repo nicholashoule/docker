@@ -6,7 +6,7 @@
 # https://play.golang.org/
 #
 FROM golang:1.11.2
-MAINTAINER Nicholas Houle <nmhoule@181gaming@gmail.com>
+MAINTAINER Nicholas Houle <181gaming@gmail.com>
 
 ENV NAME=golang-dev \
     DEBIAN_FRONTEND=noninteractive \

@@ -24,7 +24,7 @@ COPY unbound_ext.conf unbound_ext.conf
 COPY qname-minimisation.conf qname-minimisation.conf
 COPY root-auto-trust-anchor-file.conf root-auto-trust-anchor-file.conf
 RUN \
-   chown -R root:unbound /etc/unbound/unbound.conf.d 
+   chown -R root:unbound /etc/unbound/unbound.conf.d
 
 WORKDIR /
 COPY start.sh start.sh
