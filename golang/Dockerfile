@@ -27,5 +27,9 @@ RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 RUN locale-gen C.UTF-8 || true
 ENV LANG=C.UTF-8
 
+# Setting up golang example project
+WORKDIR /go
+RUN go get github.com/golang/example/hello
+
 USER root
 CMD ["/bin/bash"]
