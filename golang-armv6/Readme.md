@@ -14,8 +14,11 @@ docker run --rm -it --name golang-dev 181gaming/golang-armv6
 ## Information:
 
 ### Running the container on Linux x86_64
+
 Fedora:$ dnf install -y qemu qemu-user qemu-user-binfmt
+
   - or -
+
 Ubuntu:$ apt install -y qemu qemu-user-static qemu-user binfmt-support
 
 * docker run --rm --privileged multiarch/qemu-user-static:register
