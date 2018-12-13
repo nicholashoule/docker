@@ -8,9 +8,7 @@ docker run --rm -it --name golang-dev 181gaming/golang-armv6
 
 ## Versions:
 
-* latest, [latest/Dockerfile](https://github.com/nicholashoule/docker/tree/master/golang-armv6/)
 * 1.11.2, [1.11.2/Dockerfile](https://github.com/nicholashoule/docker/tree/master/golang-armv6/1.11.2/)
-* 1.11.1, [1.11.1/Dockerfile](https://github.com/nicholashoule/docker/tree/master/golang-armv6/1.11.1/)
 
 ## Information:
 

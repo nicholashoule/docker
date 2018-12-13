@@ -1,6 +1,6 @@
 # Golang container for building armv6 Go services
 #
-# docker run --rm -it --name golang-dev 181gaming/golang-armv6
+# docker run --rm -it --name golang-dev 181gaming/golang-armv6:1.11.2
 #
 # Information:
 # Running the container on Linux x86_64
