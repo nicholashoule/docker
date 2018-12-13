@@ -3,12 +3,11 @@
 ## Use this command to start the container:
 
 ```
-docker run --rm -it --name golang-dev 181gaming/golang
+docker run --rm -it --name golang-dev 181gaming/golang:1.11.2
 ```
 
 ## Versions:
 
-* latest, [latest/Dockerfile](https://github.com/nicholashoule/docker/tree/master/golang/)
 * 1.11.2, [1.11.2/Dockerfile](https://github.com/nicholashoule/docker/tree/master/golang/1.11.2/)
 
 ## Information:

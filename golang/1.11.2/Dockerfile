@@ -1,11 +1,11 @@
 # Run Golang container for building Go services
 #
-# docker run --rm -it --name golang-dev 181gaming/golang
+# docker run --rm -it --name golang-dev 181gaming/golang:1.11.2
 #
 # https://golang.org/help/
 # https://play.golang.org/
 #
-FROM golang:latest
+FROM golang:1.11.2
 MAINTAINER Nicholas Houle <181gaming@gmail.com>
 
 ENV NAME=golang-dev \
