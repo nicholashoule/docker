@@ -3,11 +3,12 @@
 # docker run --rm -it --name golang-dev 181gaming/golang-armv6
 #
 # Information:
-# Running the container on Linux x86_64
+#
 #  Fedora: dnf install -y qemu qemu-user qemu-user-binfmt
 #    - or -
 #  Ubuntu: apt install -y qemu qemu-user-static qemu-user binfmt-support
 #
+# Running the container on Linux x86_64
 #  - docker run --rm --privileged multiarch/qemu-user-static:register
 #  - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 #  - docker run --rm -it --name golang-dev 181gaming/golang-armv6
@@ -16,7 +17,7 @@
 # https://golang.org/help/
 # https://play.golang.org/
 #
-FROM resin/rpi-raspbian
+FROM resin/rpi-raspbian:stretch
 MAINTAINER Nicholas Houle <181gaming@gmail.com>
 
 RUN [ "cross-build-start" ]
