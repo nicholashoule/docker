@@ -70,13 +70,21 @@ sudo docker run -it --rm \
 postgres:9.5
 ```
 
+##### Nginx:
+
+###### Bash
+```
+sudo docker run -dit --rm \
+--name some-nginx -p 8080:80 nginx:1.10.3
+```
+
 ## Start container on boot:
 
 ```
 docker run -dit --restart unless-stopped -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=password -e POSTGRES_USER=postgres postgres:9.5
 ```
 
-### Links:
+#### Links:
 
 [Docker, get-started](https://www.docker.com/get-started#nav-devloper)
 
