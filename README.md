@@ -12,14 +12,6 @@ Docker containers whether Windows or Linux are backed by Docker tools and APIs a
 
 * Alleviate concern over application security
 
-### Links:
-
-[Docker, get-started](https://www.docker.com/get-started#nav-devloper)
-
-[From Wikipedia, Docker](https://en.wikipedia.org/wiki/Docker_%28software%29)
-
-Docker is used to run software packages called "containers". Containers are isolated from each other and bundle their own application, tools, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating system kernel and are thus more lightweight than virtual machines. Containers are created from "images" that specify their precise contents. Images are often created by combining and modifying standard images downloaded from public repositories.
-
 # Get Docker
 
 ##### Windows:
@@ -82,3 +74,11 @@ postgres:9.5
 ```
 docker run -dit --restart unless-stopped -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=password -e POSTGRES_USER=postgres postgres:9.5
 ```
+
+### Links:
+
+[Docker, get-started](https://www.docker.com/get-started#nav-devloper)
+
+[From Wikipedia, Docker](https://en.wikipedia.org/wiki/Docker_%28software%29)
+
+Docker is used to run software packages called "containers". Containers are isolated from each other and bundle their own application, tools, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating system kernel and are thus more lightweight than virtual machines. Containers are created from "images" that specify their precise contents. Images are often created by combining and modifying standard images downloaded from public repositories.
