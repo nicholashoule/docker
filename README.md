@@ -1,4 +1,4 @@
-# Docker for Developers
+## Docker for Developers
 
 Building and deploying new applications is faster with containers. Docker containers wrap up software and its dependencies into a standardized unit for software development that includes everything it needs to run: code, runtime, system tools and libraries. This guarantees that your application will always run the same and makes collaboration as simple as sharing a container image.
 
@@ -12,22 +12,22 @@ Docker containers whether Windows or Linux are backed by Docker tools and APIs a
 
 * Alleviate concern over application security
 
-# Get Docker
+## Get Docker
 
-##### Windows:
+###### Windows:
 
 https://www.docker.com/products/docker-desktop
 
-##### Mac:
+###### Mac:
 
 https://docs.docker.com/docker-for-mac/install/
 
-##### Linux:
+###### Linux:
 
 https://docs.docker.com/install/
 
 
-# Running containers:
+## Running containers:
 
 ```
 docker --version
@@ -51,17 +51,17 @@ Options:
 
 ```
 
-## Redis:
+##### Redis:
 
-##### Bash
+###### Bash
 ```
 sudo docker run -it --rm \
 -p 6379:6379 --name some-redis redis:4.0
 ```
 
-## Postgres:
+##### Postgres:
 
-##### Bash
+###### Bash
 ```
 sudo docker run -it --rm \
 -p 5432:5432 --name some-postgres \
@@ -70,7 +70,8 @@ sudo docker run -it --rm \
 postgres:9.5
 ```
 
-# Start container on boot:
+## Start container on boot:
+
 ```
 docker run -dit --restart unless-stopped -p 5432:5432 --name some-postgres -e POSTGRES_PASSWORD=password -e POSTGRES_USER=postgres postgres:9.5
 ```
