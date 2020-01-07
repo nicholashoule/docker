@@ -10,18 +10,18 @@ LABEL maintainer "Nicholas Houle <181gaming@gmail.com>"
 ENV NAME=unbound-cloudflare \
     UNBOUND_VERSION=1.6
 
-# Aqua Security's MicroScanner
-ADD https://get.aquasec.com/microscanner /
-RUN chmod +x /microscanner
-RUN /microscanner ${token} --continue-on-failure
+ARG token
 
 RUN APT_PACKAGES='apt-transport-https curl ca-certificates dnsutils vim' && \
     set -x && \
     DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --no-install-recommends \
       $APT_PACKAGES \
       unbound && \
+    wget -O /microscanner https://get.aquasec.com/microscanner && \
+    chmod +x /microscanner && \
+    /microscanner ${token} --continue-on-failure && \
     apt-get autoremove -y && apt-get clean && \
-    rm -fr /tmp/* /var/tmp/* /var/lib/apt/lists/*
+    rm -fr /tmp/* /var/tmp/* /var/lib/apt/lists/* /microscanner
 
 WORKDIR /etc/unbound/unbound.conf.d
 COPY unbound_srv.conf unbound_srv.conf
